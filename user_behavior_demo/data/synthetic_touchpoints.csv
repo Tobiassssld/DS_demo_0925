@@ -1,0 +1,7 @@
+CustomerID,channel,interaction_date,cost
+17850,Email,2010-11-15,0.20
+17850,Social,2010-11-22,0.35
+13047,Email,2010-11-10,0.15
+13047,Search,2010-11-18,0.45
+12583,Email,2010-11-02,0.18
+12583,Affiliate,2010-11-20,0.30
