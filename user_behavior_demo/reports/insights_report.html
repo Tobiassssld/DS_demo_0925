@@ -1,0 +1,111 @@
+<html><head><title>Customer Insights</title></head><body>
+<h1>Customer Segmentation Insights</h1>
+<h2>Model Comparison</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>silhouette</th>
+      <th>calinski_harabasz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>word2vec</td>
+      <td>0.083</td>
+      <td>1.409</td>
+    </tr>
+    <tr>
+      <td>doc2vec</td>
+      <td>0.338</td>
+      <td>5.159</td>
+    </tr>
+    <tr>
+      <td>tfidf</td>
+      <td>0.057</td>
+      <td>1.263</td>
+    </tr>
+    <tr>
+      <td>autoencoder</td>
+      <td>0.226</td>
+      <td>2.897</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Cluster Summaries</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>cluster</th>
+      <th>Recency_mean</th>
+      <th>Recency_median</th>
+      <th>Frequency_mean</th>
+      <th>Frequency_median</th>
+      <th>Monetary_mean</th>
+      <th>Monetary_median</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>4.50</td>
+      <td>4.50</td>
+      <td>126.24</td>
+      <td>126.24</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>4.00</td>
+      <td>4.00</td>
+      <td>104.24</td>
+      <td>104.24</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Top Categories per Cluster</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>cluster</th>
+      <th>Description</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>ASSORTED COLOUR BIRD ORNAMENT</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>STRAWBERRY CHARLOTTE BAG</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>PARTY BUNTING</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>WHITE HANGING HEART T-LIGHT HOLDER</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>JUMBO BAG RED RETROSPOT</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>CREAM CUPID HEARTS COAT HANGER</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

@@ -24,7 +24,21 @@ def project_embeddings(
     if method == "umap" and umap is not None:
         reducer = umap.UMAP(n_components=n_components, random_state=random_state, **kwargs)
         return reducer.fit_transform(features)
-    tsne = TSNE(n_components=n_components, random_state=random_state, **kwargs)
+    n_samples = features.shape[0]
+    if n_samples <= 1:
+        raise ValueError("At least two samples are required for projection.")
+
+    perplexity = kwargs.pop("perplexity", 30)
+    max_valid_perplexity = max(1, n_samples - 1)
+    if perplexity >= n_samples:
+        perplexity = min(perplexity, max_valid_perplexity)
+
+    tsne = TSNE(
+        n_components=n_components,
+        random_state=random_state,
+        perplexity=perplexity,
+        **kwargs,
+    )
     return tsne.fit_transform(features)
 
 
